@@ -8,6 +8,7 @@ import Login from './auth/Login';
 import Sidebar from './components/Sidebar';
 import StudentManagement from './components/StudentManagement';
 import { auth } from './firebase/firebaseConfig';
+import SuperAdminScreen from './screens/admins/SuperAdminScreen';
 import Dashboard from './screens/Dashboard';
 import ParentManagement from './screens/parent/ParentManagement';
 import SchoolsScreen from './screens/schools/schoolDash';
@@ -74,6 +75,16 @@ function App() {
             <Route 
               path="/" 
               element={<Dashboard onLogout={handleLogout} userRole={userRole} />} 
+            />
+            <Route 
+              path="/admins" 
+              element={
+                userRole && ['admin', 'staff'].includes(userRole) ? (
+                  <SuperAdminScreen userRole={userRole} />
+                ) : (
+                  <Navigate to="/" replace />
+                )
+              } 
             />
             <Route 
               path="/schools" 

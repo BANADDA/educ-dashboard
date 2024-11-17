@@ -4,6 +4,7 @@ import {
   GraduationCap,
   LayoutDashboard,
   Library,
+  Lock,
   LogOut
 } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -27,6 +28,12 @@ const Sidebar = () => {
       title: 'Dashboard',
       icon: LayoutDashboard,
       path: '/',
+      badge: null
+    },
+    {
+      title: 'admins',
+      icon: Lock,
+      path: '/admins',
       badge: null
     },
     {
