@@ -8,13 +8,13 @@ import Login from './auth/Login';
 import Sidebar from './components/Sidebar';
 import StudentManagement from './components/StudentManagement';
 import { auth } from './firebase/firebaseConfig';
-import SuperAdminScreen from './screens/admins/SuperAdminScreen';
 import Dashboard from './screens/Dashboard';
 import ParentManagement from './screens/parent/ParentManagement';
 import SchoolsScreen from './screens/schools/schoolDash';
 import LevelsScreen from './screens/schools/subjectDash';
 import SubjectDetailsScreen from './screens/schools/SubjectDetailsScreen'; // Add this import
 import SubjectsScreen from './screens/schools/SubjectsScreen';
+import SuperAdminScreen from './screens/superAdminScreen';
 import TeachersDataScreen from './screens/teachers/teachers';
 
 const db = getFirestore();

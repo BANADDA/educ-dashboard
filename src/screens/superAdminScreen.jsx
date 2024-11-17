@@ -33,7 +33,7 @@ import {
 import { createUserWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { collection, doc, onSnapshot, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
-import { auth, db } from "../../firebase/firebaseConfig";
+import { auth, db } from "../firebase/firebaseConfig";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
